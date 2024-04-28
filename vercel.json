@@ -1,9 +1,5 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/(.*)", "destination": "/client/$1" }
-  ],
-  "headers": [
-    { "source": "/client/.*\\.js", "headers": [{ "key": "Content-Type", "value": "application/javascript" }] }
+    { "source": "/(.*)", "destination": "/api/index" }
   ]
 }
