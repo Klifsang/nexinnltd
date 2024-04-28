@@ -5,6 +5,14 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [aboutMessage, setAboutMessage] = useState('');
+
+  useEffect(() => {
+    fetch('/about') // Relative path to your API route
+      .then(response => response.json())
+      .then(data => setAboutMessage(data.message))
+      .catch(error => console.error('Error fetching about page:', error));
+  }, []);
 
   return (
     <>
@@ -27,6 +35,9 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
+      </p>
+      <p className="read-the-docs">
+        {aboutMessage}
       </p>
     </>
   )
