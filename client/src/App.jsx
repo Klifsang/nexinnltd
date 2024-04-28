@@ -8,6 +8,7 @@ function App() {
   const [aboutMessage, setAboutMessage] = useState('');
 
   useEffect(() => {
+    console.log('data.message')
     fetch('/about') // Relative path to your API route
       .then(response => response.json())
       .then(data => {
