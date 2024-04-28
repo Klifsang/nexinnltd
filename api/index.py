@@ -8,4 +8,4 @@ def index():
 
 @app.route('/about')
 def about():
-    return jsonify({'about': 'about me here'})
+    return jsonify({'about': 'about me info here'})

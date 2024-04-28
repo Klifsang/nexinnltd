@@ -12,8 +12,8 @@ function App() {
     fetch('/about') // Relative path to your API route
       .then(response => response.json())
       .then(data => {
-        setAboutMessage(data.message)
-        console.log(data.message)
+        setAboutMessage(data.about)
+        console.log(data.about)
       })
       .catch(error => console.error('Error fetching about page:', error));
   }, []);
