@@ -10,7 +10,10 @@ function App() {
   useEffect(() => {
     fetch('/about') // Relative path to your API route
       .then(response => response.json())
-      .then(data => setAboutMessage(data.message))
+      .then(data => {
+        setAboutMessage(data.message)
+        console.log(data.message)
+      })
       .catch(error => console.error('Error fetching about page:', error));
   }, []);
 
