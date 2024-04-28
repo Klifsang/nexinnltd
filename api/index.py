@@ -17,11 +17,4 @@ def about():
     return jsonify({'about': 'about me info here'})
 
 
-app.add_url_rule('/login', 'login', login, methods=['GET', 'POST'])
-app.add_url_rule('/logout', 'logout', logout, methods=['GET', 'POST'])
-# app.add_url_rule('/check_login', 'check_login', check_login, methods=['GET', 'POST'])
-app.add_url_rule('/admin', 'admin', admin, methods=['GET', 'POST', 'PATCH', 'DELETE'])
-app.add_url_rule('/clients', 'clients', clients, methods=['GET', 'POST', 'PATCH', 'DELETE'])
-app.add_url_rule('/tickets', 'tickets', tickets, methods=['GET', 'POST', 'DELETE', 'PATCH'])
-
 
